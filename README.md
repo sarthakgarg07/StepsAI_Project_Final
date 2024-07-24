@@ -23,7 +23,7 @@ PDF Content Analyzer is a web application that extracts, processes, and analyzes
 
 ### HOW TO RUN
 - streamlit run project.py
-this command will launch streamlit in your browser
+- this command will launch streamlit in your browser
 
 
 ### REFRENCES
