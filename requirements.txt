@@ -1,0 +1,10 @@
+streamlit
+PyPDF2
+nltk
+sentence-transformers
+openai
+numpy
+scikit-learn
+pymilvus
+python-dotenv
+langchain
