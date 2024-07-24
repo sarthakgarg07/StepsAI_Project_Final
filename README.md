@@ -18,6 +18,13 @@ PDF Content Analyzer is a web application that extracts, processes, and analyzes
 - Python 3.8 or higher
 - Docker
 - OpenAI API key
+- Pls set you API KEY in .env file
+- Set your own port number and host id to connect milvus to docker
+
+### HOW TO RUN
+- streamlit run project.py
+this command will launch streamlit in your browser
+
 
 ### REFRENCES
 -**https://milvus.io/docs/integrate_with_sentencetransformers.md
@@ -25,6 +32,3 @@ PDF Content Analyzer is a web application that extracts, processes, and analyzes
 -**https://milvus.io/docs/install_standalone-docker.md
 
 The project will take some time after uploading the files as the vecor embeddings takes time.
-##IMPORTANT
-Pls set you API KEY in .env file
-Set your own port number and host id to connect milvus to docker
