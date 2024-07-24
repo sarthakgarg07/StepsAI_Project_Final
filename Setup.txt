@@ -1,0 +1,21 @@
+## Prerequisites
+
+1. Python 3.8 or higher
+2. Docker
+3. Connect to Milvus using the code given in project.py
+4. Test the connection using test_milvus_connection.py
+5. load OPENAI_API_KEY=your-openai-api-key
+    LLM_MODEL=gpt-3.5-turbo  # or another model of your choice
+    in .env file
+6. docker pull milvusdb/milvus:latest (most important step)
+7. see the docker-compose.yml in the github and 
+8. docker-compose up -d
+9. verify whether milvus is running
+    docker-compose ps
+    
+  #run the application
+10. streamlit run app.py
+
+
+
+
