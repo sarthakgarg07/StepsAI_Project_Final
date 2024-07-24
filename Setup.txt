@@ -1,20 +1,78 @@
+# PDF Content Analyzer Setup Guide
+
+Follow these steps to set up and run the PDF Content Analyzer project.
+
 ## Prerequisites
 
 1. Python 3.8 or higher
 2. Docker
-3. Connect to Milvus using the code given in project.py
-4. Test the connection using test_milvus_connection.py
-5. load OPENAI_API_KEY=your-openai-api-key
+3. Connect to Milvus using the code given in `project.py`
+4. Test the connection using `test_milvus_connection.py`
+5. Load the following environment variables in a `.env` file:
+    ```
+    OPENAI_API_KEY=your-openai-api-key
     LLM_MODEL=gpt-3.5-turbo  # or another model of your choice
-    in .env file
-6. docker pull milvusdb/milvus:latest (most important step)
-7. see the docker-compose.yml in the github and 
-8. docker-compose up -d
-9. verify whether milvus is running
+    ```
+6. Pull the latest Milvus Docker image:
+    ```sh
+    docker pull milvusdb/milvus:latest
+    ```
+7. See the `docker-compose.yml` file in the GitHub repository.
+8. Start Milvus using Docker Compose:
+    ```sh
+    docker-compose up -d
+    ```
+9. Verify whether Milvus is running:
+    ```sh
     docker-compose ps
-    
-  #run the application
-10. streamlit run app.py
+    ```
+
+## Run the Application
+
+1. Clone the repository to your local machine:
+    ```sh
+    git clone https://github.com/your-username/pdf-content-analyzer.git
+    cd pdf-content-analyzer
+    ```
+2. Create and activate a virtual environment:
+    ```sh
+    python -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    ```
+3. Install the necessary Python packages:
+    ```sh
+    pip install -r requirements.txt
+    ```
+4. Start the Streamlit application:
+    ```sh
+    streamlit run app.py
+    ```
+
+## Using the Application
+
+1. Open the application in your browser.
+2. Upload one or more PDF files using the sidebar.
+3. Enter a query in the text input field on the main page.
+4. View the extracted text, hierarchical summaries, and answers to your queries.
+
+## Troubleshooting
+
+- Ensure Docker is running and Milvus is up by checking `docker-compose ps`.
+- Verify that your OpenAI API key is correctly set in the `.env` file.
+- Check for any error messages in the terminal where you ran `streamlit run app.py`.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+
+
+## Acknowledgments
+
+- [Milvus](https://milvus.io/) for vector storage and search.
+- [OpenAI](https://openai.com/) for GPT models.
+- [Streamlit](https://streamlit.io/) for the web application framework.
+- [Sentence Transformers](https://www.sbert.net/) for embedding models.
+
 
 
 
